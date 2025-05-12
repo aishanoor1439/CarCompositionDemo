@@ -1,16 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.mavenproject40;
 
-/**
- *
- * @author ABC
- */
 public class Mavenproject40 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Engine myEngine = new Engine(220, "V6");
+        Door myDoor = new Door(4);
+        Capacity myCapacity = new Capacity(5);
+        Wheel myWheel = new Wheel(17);
+
+        Car myCar = new Car(myEngine, myDoor, myCapacity, myWheel);
+
+        myCar.displayCarInfo();
+
+        myCar.engine.start();
+        myCar.door.openDoors();
+        myCar.capacity.showCapacity();
+        myCar.wheel.rotate();
     }
 }
